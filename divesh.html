@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shri Ram Gym Akurdi</title><!-- EmailJS Script --><script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script><script>
+(function(){
+  emailjs.init("OaVr0oJyWOM8cO7KF"); // replace with your EmailJS public key
+})();
+
+function sendMail(event) {
+  event.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let mobile = document.getElementById("mobile").value;
+
+  let params = {
+    user_name: name,
+    user_mobile: mobile
+  };
+
+  emailjs.send("service_ir88bue", "template_4sv7nog", params)
+    .then(function(response) {
+      alert("Registration Successful! We will contact you soon.");
+    }, function(error) {
+      alert("Failed to send. Try again.");
+    });
+}
+</script><style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: black;
+}
+
+header {
+    background: url('https://images.unsplash.com/photo-1599058917212-d750089bc07e') no-repeat center center/cover;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 50px;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+form {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.membership {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    border: 1px solid white;
+}
+
+footer {
+    background: #000;
+    padding: 20px;
+}
+
+/* WhatsApp Button */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style></head>
+<body><header>
+    <h1>SHREE RAM GYM <br></h1>
+</header><section>
+    <h2>IF YOU WANT LONG LIFE REGISTER HERE</h2>
+    <form onsubmit="sendMail(event)">
+        <input type="text" id="name" placeholder="Enter Your Name" required><br>
+        <input type="text" id="mobile" placeholder="Enter Mobile Number" required><br>
+        <button type="submit">Register</button>
+    </form>
+</section><section>
+    <h2>Membership Plans</h2>
+    <div class="membership">
+        <div class="card">Combo 1 ₹1500 FOR 3 MONTHS <br>Details here</div>
+        <div class="card">Combo 2  ₹2500 FOR 6 MONTHS <br>Details here</div>
+        <div class="card">Combo 3  ₹4000 FOR 9 MONTHS <br>Details here</div>
+        <div class="card">Combo 4 ₹5000 FOR  1 YEAR <br>Details here</div>
+    </div>
+</section><section>
+    <h2>Contact Us</h2>
+    <p>Mobile No: 9960889683</p>
+    <p>Email:DIVESHPTOLE999@GMAIL.COM</p>
+    <p>Instagram: @XX_divesh_3265_XX</p>
+</section><!-- WhatsApp Button (replace number) --><a class="whatsapp" href="https://wa.me/919960889683" target="_blank">Chat on WhatsApp</a>
+
+<footer>
+    <p>© Shri Ram Gym Akurdi</p>
+</footer></body>
+</html>
